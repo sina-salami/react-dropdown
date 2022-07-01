@@ -1,0 +1,11 @@
+.check {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    display: inline-block;
+    transform: rotate(45deg);
+    height: 12px;
+    width: 6px;
+    border-bottom: 3px solid #1890ff;
+    border-right: 3px solid #1890ff;
+  }

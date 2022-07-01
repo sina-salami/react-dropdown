@@ -1,0 +1,111 @@
+.container {
+    position: relative;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.container-active::after {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 8px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.dropdown {
+    all: unset;
+    height: 36px;
+    width: 180px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.dropdown:focus {
+    border-color: #1890ff;
+    outline: #e6f7ff solid 2px;
+}
+
+.dropdown-label {
+    position: absolute;
+    top: 7px;
+    left: 16px;
+    color: gray;
+    transition: all 0.3s ease;
+}
+
+.dropdown-label-active {
+    top: -22px;
+    font-size: 12px;
+    left: 0;
+    color: #1890ff;
+}
+
+.dropdown-options-wrapper {
+    position: absolute;
+    top: 42px;
+    right: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 8px 8px 0 8px;
+    box-sizing: border-box;
+    width: 180px;
+    max-height: 200px;
+    display: none;
+}
+
+.options-active {
+    display: block;
+    border: 1px solid #0000000F;
+    overflow: scroll;
+}
+
+.highlight {
+    width: 100%;
+    height: 18px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    position: sticky;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.dropdown-option {
+    height: 36px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: gray;
+    box-sizing: border-box;
+    margin: 4px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-option:hover {
+    background-color: #e6f7ff;
+}
+
+.dropdown-option-selected {
+    color: #1890ff;
+    background-color: #e6f7ff;
+    font-weight: bold;
+}
